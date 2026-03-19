@@ -42,7 +42,7 @@ class Pricing: #taxes for food and drink are set to 6% and 8% respectively
 
     def calculate_discounts(self, subtotal): #uses the subtotal and discount list to find the total discount
         total_discount = 0
-        for a_discount in discounts:
+        for a_discount in self.discounts:
             total_discount += subtotal - a_discount
         return total_discount
     def calculate_tip(self, amount): #applies a tip to the order based on its subtotal
