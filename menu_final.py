@@ -12,16 +12,16 @@ class MenuItem:
     def item_details(self): #returns a statement of the details of an item such as its id
         return f"Item {self.name} - {self.id}, ${self.price}, Category: {self.category}, Stock: {self.stock}"
     def toggle_availability(self): #allows availability of an item to be switched
-        self.availability = not self.availability
+        self.available = not self.available
     def adjust_stock(self, quantity): #allows the stock of an item to be updated
         self.stock = quantity
         
 class FoodItem(MenuItem): #creates items that are in the food category based on the parent class MenuItem
-    def __init__(self, id, name, price, category, available = True, ):
+    def __init__(self, id, name, price, available = True, ):
         super().__init__(id, name, price, "food", available)
         
 class DrinkItem(MenuItem): #creates items that are in the drink category based on the parent class MenuItem
-    def __init__(self, id, name, price, category, available = True):
+    def __init__(self, id, name, price, available = True):
         super().__init__(id, name, price, "drink", available)
 
 class Combo(MenuItem):
