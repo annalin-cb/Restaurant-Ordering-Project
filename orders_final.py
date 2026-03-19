@@ -45,7 +45,7 @@ class Order: #outlines the ordering process
       qty = order_item.quantity
       price = order_item.get_total()
       print(f"{name} x{qty} = ${price:.2f}")
-      print("\n--------------------")
-      print(pricing.calculate_total(self.items))
-      print("\n--------------------")
+    print("\n--------------------")
+    print(pricing.calculate_total(self.items))
+    print("\n--------------------")
 
