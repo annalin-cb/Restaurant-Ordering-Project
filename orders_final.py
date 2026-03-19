@@ -39,13 +39,13 @@ class Order: #outlines the ordering process
 
   
   def print_receipt(self, pricing): #prints string outlining a receipt based on the items within an order
-    print("\n------ RECEIPT ------")
+    print("\n-------- RECEIPT --------")
     for order_item in self.items:
       name = order_item.item.name
       qty = order_item.quantity
       price = order_item.get_total()
       print(f"{name} x{qty} = ${price:.2f}")
-    print("\n--------------------")
+    print("\n-------------------------")
     print(pricing.calculate_total(self.items))
-    print("\n--------------------")
+    print("-------------------------")
 
