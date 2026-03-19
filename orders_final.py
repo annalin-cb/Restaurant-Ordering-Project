@@ -20,9 +20,10 @@ class Order: #outlines the ordering process
   def change_status(self, new_status): #calls to change the status of an order, status name must be valid
     if new_status in Order.status_descriptions[self.status]:
       self.status = new_status
+      print(f"Order {new_status}")
     else:
       raise Exception("Invalid status")
-
+    
   def confirm_order(self): #each indivual part of the ordering process which may be called on a order
     self.change_status("confirmed")
   def prepare_order(self):
