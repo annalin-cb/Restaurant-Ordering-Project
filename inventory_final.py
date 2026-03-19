@@ -20,7 +20,7 @@ class Inventory:
     self.next_id += 1
     self.add_item(FoodItem(self.next_id, "Lasagna", 9.99, "food", True))
     self.next_id += 1
-    self.add_item(FoodItem(self.next_id, "Alfredo Pasta", 9.99, "food", True))
+    self.add_item(FoodItem(self.next_id, "Vodka Pasta", 9.99, "food", True))
     self.next_id += 1
     self.add_item(DrinkItem(self.next_id, "Choice Soda", 3.99, "drink", True))
     self.next_id += 1
