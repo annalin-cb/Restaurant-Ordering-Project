@@ -63,3 +63,8 @@ Pricing (Class):
 * Program loads preset menu items, ready to be accessed in orders
 * By creating objects from the item classes and calling methods from the Inventory, Pricing, or Order classes, the user can select, create, and process orders
 * Will display details called by methods such as a reciept, inventory, etc.
+* ### Commands:
+  * ex: create object from the menu category named "item1" with the necessary arguments
+    * Calling item1.get_price() or item1.item_details() will output infromation about the object
+  * This same logic applies to all classes within thee program:
+    * order = Order(); order.confirm_order()
