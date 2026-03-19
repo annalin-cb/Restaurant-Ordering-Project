@@ -55,4 +55,4 @@ class Pricing: #taxes for food and drink are set to 6% and 8% respectively
         tax = self.apply_tax(items_ordered)
         tip = self.calculate_tip(after_discount)
         final_total = after_discount + tax + tip
-        return f"Calculating order...\nSubtotal: {subtotal:.2f} \nDiscount: {discount:.2f} \nTax: {tax:.2f} \nTip: {tip:.2f} \n.......... \nTotal: {final_total:.2f}"
+        return f"Calculating order...\nSubtotal: ${subtotal:.2f} \nDiscount: ${discount:.2f} \nTax: ${tax:.2f} \nTip: ${tip:.2f} \n.......... \nTotal: ${final_total:.2f}"
