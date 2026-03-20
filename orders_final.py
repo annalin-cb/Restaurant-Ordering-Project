@@ -50,3 +50,12 @@ class Order: #outlines the ordering process
     print(pricing.calculate_total(self.items))
     print("-------------------------")
 
+  def finalize_order(self): # reduces stock for all items in the order after payment
+    if self.status != "paid":
+      raise Exception("Order must be paid to finalize stock")
+    for order_item in self.items:
+      item = order_item.item
+      if item.stock < order_item.quantity:
+        raise Exception(f"Not enough stock for {item.name}")
+      item.stock -= order_item.quantity
+
